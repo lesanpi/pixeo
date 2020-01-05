@@ -239,11 +239,12 @@ nav ul li:hover a {
   position: fixed;
   z-index: 500;
   top: 0;
-  right: 0;
+  right: 0px;
   z-index: 10;
   height: 60px;
-  width: 160px;
+  width: 200px;
   display: flex;
+  padding: 10px;
   cursor: pointer;
   justify-content: center;
   align-items: center;
@@ -260,6 +261,9 @@ nav ul li:hover a {
   font-weight: bolder;
   border-color: white;
   border-radius: 10px;
+}
+.search-input svg {
+  margin: 0 5px;
 }
 /*ABOUT US CONTAINER*/
 .about-us-container {
