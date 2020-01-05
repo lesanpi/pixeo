@@ -5,19 +5,21 @@ $menu = document.getElementById("menu");
 $right = document.getElementById("right");
 $left = document.getElementById("left");
 var classNameActive;
-if (window.innerWidth <= 700) {
-  $products = document.getElementsByClassName("products-sm");
-  classNameActive = "active-sm";
-} else if (window.innerWidth <= 1100) {
-  $products = document.getElementsByClassName("products-md");
-  classNameActive = "active-md";
-} else {
-  $products = document.getElementsByClassName("products");
-  classNameActive = "active";
-}
+
 var activeProductGroup = 0;
 
 function left() {
+  if (window.innerWidth <= 700) {
+    $products = document.getElementsByClassName("products-sm");
+    classNameActive = "active-sm";
+  } else if (window.innerWidth <= 1100) {
+    $products = document.getElementsByClassName("products-md");
+    classNameActive = "active-md";
+  } else {
+    $products = document.getElementsByClassName("products");
+    classNameActive = "active";
+  }
+
   $products[activeProductGroup].classList.remove(classNameActive);
   activeProductGroup--;
   if (activeProductGroup < 0)
@@ -26,6 +28,16 @@ function left() {
   $products[activeProductGroup].classList.add(classNameActive);
 }
 function right() {
+  if (window.innerWidth <= 700) {
+    $products = document.getElementsByClassName("products-sm");
+    classNameActive = "active-sm";
+  } else if (window.innerWidth <= 1100) {
+    $products = document.getElementsByClassName("products-md");
+    classNameActive = "active-md";
+  } else {
+    $products = document.getElementsByClassName("products");
+    classNameActive = "active";
+  }
   $products[activeProductGroup].classList.remove(classNameActive);
   activeProductGroup++;
   if (activeProductGroup > Array.from($products).length - 1)
